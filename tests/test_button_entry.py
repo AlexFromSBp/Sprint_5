@@ -1,4 +1,4 @@
-"""from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from web_locators.locator import *
@@ -50,7 +50,7 @@ class TestStellarBurgersButtonEntry:
     def test_auth_through_button_enter_from_password_resert_form(self, driver): # Проверка успешной авторизации по кнопке Войти из окна Восстановление пароля
         driver.get(Urls.url_resert_password)                     # Переход на форму восстановления пароля
                                                                  # Найти кнопку Войти -> Тап
-        driver.find_element(*AuthPassword.ap_login_text_with_href).click()
+        driver.find_element(*ButtonEnter.be_login_text_with_href).click()
         WebDriverWait(driver, 8).until(EC.presence_of_element_located(ButtonEnter.be_login_text))
                                                                  # Заполняем данные
         driver.find_element(*ButtonEnter.be_email_field).send_keys(PersonData.login)
@@ -59,4 +59,4 @@ class TestStellarBurgersButtonEntry:
         driver.find_element(*ButtonEnter.be_login_button_any_forms).click()
         WebDriverWait(driver, 8).until(EC.presence_of_element_located(HomePage.hp_button_order))
                                                                  # Проверить, что текущий url = url_home_page
-        assert driver.current_url == Urls.url_home_page"""
+        assert driver.current_url == Urls.url_home_page

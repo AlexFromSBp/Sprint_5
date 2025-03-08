@@ -23,7 +23,7 @@ class HomePage:
     hp_text_s = By.XPATH, ".//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Соусы']"
     hp_text_b = By.XPATH, ".//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Булки']"
     hp_text_f = By.XPATH, ".//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Начинки']"
-
+    hp_activ_page = By.XPATH, ".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']"
 
 class ButtonEnter:
     be_login_text = (By.XPATH, ".//h2[text()='Вход']")
@@ -32,6 +32,7 @@ class ButtonEnter:
     be_email_field = (By.XPATH, ".//label[text()='Email']//parent::*/input[@type='text' and @name='name']")
     be_password_field = (By.XPATH, ".//input[@type='password' and @name='Пароль']")
     be_element_with_login_text = (By.XPATH, ".//*[text() = 'Вход']")
+    be_login_text_with_href = (By.XPATH, ".//a[text()='Войти']")
 
 
 class LKProfile:
@@ -42,4 +43,3 @@ class LKProfile:
 class LKEnter:
     lke_button_constructor = (By.XPATH, ".//p[text()='Конструктор']")
     lke_button_enter = (By.XPATH, ".//div[@class='Auth_login__3hAey']/h2]")
-
